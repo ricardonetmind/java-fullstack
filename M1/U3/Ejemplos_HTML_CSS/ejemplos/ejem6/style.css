@@ -1,0 +1,28 @@
+body{
+	font-size: 15px;
+	font-family: verdana;
+}
+
+ul{list-style:none;padding: 0;}
+a{text-decoration: none;}
+
+div.a{
+	border: 2px solid red;
+	background-color: gray;
+	padding: 10px;
+	display: inline-block;
+	color:white;
+}
+
+nav.b{
+	border:2px solid blue;
+	background-color: yellow;
+	padding: 10px;
+	display: none;
+	color:black;
+	position: absolute;
+}
+
+header#mydiv:hover > nav.b{display: block;}
+
+

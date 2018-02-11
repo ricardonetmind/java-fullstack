@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+	
+	<header>Menus</header>
+
+	<section>
+		<h1>Registro de usuarios</h1>
+		<form action="" id="frm_entrar" novalidate>
+			<ul id="errores"></ul>
+			<div>
+				<input type="text" id="nombre" name="nombre" minlength="3" placeholder="Nombre" pattern="[a-zA-Z]*" required>
+				<div class="mensajes_error">
+					<div id="nombre[tooShort]">El nombre debe tener mínimo 3 caracteres</div>
+					<div id="nombre[patternMismatch]">El nombre solo puede tener texto</div>
+					<div id="nombre[valueMissing]">El nombre debe tener valor</div>
+				</div>
+			</div>
+			<div>
+				<input type="text" id="apellido" name="apellido" minlength="3" placeholder="Apellido" pattern="[a-zA-Z]*" required>
+				<div class="mensajes_error">
+					<div id="apellido[tooShort]">El apellido debe tener mínimo 3 caracteres</div>
+					<div id="apellido[patternMismatch]">El apellido solo puede tener texto</div>
+					<div id="apellido[valueMissing]">El apellido debe tener valor</div>
+				</div>
+			</div>
+			<div>
+				<input type="number" id="edad" name="edad" min="14" max="100" placeholder="Edad" required>
+				<div class="mensajes_error">
+					<div id="edad[rangeOverflow]">La edad mínima es 14</div>
+					<div id="edad[rangeUnderflow]">La edad máxima es 100</div>
+					<div id="edad[valueMissing]">El edad debe tener valor</div>
+				</div>
+			</div>
+			<div>
+				<input type="email" id="email" name="email" placeholder="email" required>
+				<div class="mensajes_error">
+					<div id="email[error]">Debes introducir un email correcto</div>
+				</div>
+			</div>
+			
+			<div><button id="btn_entrar">Entrar</button></div>
+		</form>
+	</section>
+
+	<footer>...</footer>
+
+</body>
+<script src="js/forms_alta.js"></script>
+</html>

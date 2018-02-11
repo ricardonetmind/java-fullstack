@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario</title>
+	<link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+	
+	<header>Menus</header>
+
+	<section>
+		<h1>Control de acceso</h1>
+		<form action="" id="frm_entrar" novalidate>
+			<div id="errores"></div>
+			<div><input type="email" id="email" name="email" placeholder="email" required></div>
+			<div><input type="text" id="pass" name="pass" minlength="6" placeholder="password" pattern="[a-z]*" required></div>
+			<div><button id="btn_entrar">Entrar</button></div>
+		</form>
+	</section>
+
+	<footer>...</footer>
+
+</body>
+<script src="js/forms.js"></script>
+</html>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.netmind.models.Employee" table="empleado">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+
+		<property name="firstName"></property>
+		<property name="lastName"></property>
+		<many-to-one name="departamento" cascade="all"
+			class="com.netmind.models.Department" column="departamento" unique="true" />
+		
+		<set name="roles" table="rol_empleado" cascade="all">
+            <key name="id" />
+            <one-to-many class="com.netmind.models.Role" />
+        </set>
+
+	</class>
+
+</hibernate-mapping>  

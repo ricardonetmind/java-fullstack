@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9a9d0697-2ad8-40b3-9ae2-d4d8b2062dcb" activeEnvironment="Default" name="XMLWS" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f91baf02-a1c7-4f85-9f4e-e613b54dc8ef" wsaVersion="NONE" name="GenXMLServiceSoapBinding" type="wsdl" bindingName="{http://ricardo.es/}GenXMLServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//GenXMLWS/GenXMLService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//GenXMLWS/GenXMLService?wsdl"><con:part><con:url>http://localhost:8080//GenXMLWS/GenXMLService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GenXMLService" targetNamespace="http://ricardo.es/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ricardo.es/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ricardo.es/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getXML" type="tns:getXML"/>
+      <xs:element name="getXMLResponse" type="tns:getXMLResponse"/>
+      <xs:complexType name="getXML">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getXMLResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getXMLResponse">
+    <wsdl:part element="tns:getXMLResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getXML">
+    <wsdl:part element="tns:getXML" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GenXML">
+    <wsdl:operation name="getXML">
+      <wsdl:input message="tns:getXML" name="getXML"></wsdl:input>
+      <wsdl:output message="tns:getXMLResponse" name="getXMLResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GenXMLServiceSoapBinding" type="tns:GenXML">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getXML">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getXML">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getXMLResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GenXMLService">
+    <wsdl:port binding="tns:GenXMLServiceSoapBinding" name="GenXMLPort">
+      <soap:address location="http://localhost:8080/GenXMLWS/GenXMLService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/GenXMLWS/GenXMLService</con:endpoint></con:endpoints><con:operation id="9eb0fc31-77ea-4679-85ce-b9f397659313" isOneWay="false" action="" name="getXML" bindingOperationName="getXML" type="Request-Response" outputName="getXMLResponse" inputName="getXML" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3d5f8979-27da-4e22-a379-377481dd34c8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/GenXMLWS/GenXMLService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:getXML>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </ric:getXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ricardo.es/GenXML/getXML"/></con:call></con:operation></con:interface><con:testSuite id="6cc43462-69df-4e6a-9836-7bc46345a8cb" name="GenXMLServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="e8a9598d-5e6c-42ec-9168-7c48c2820dbf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getXML TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="59a2fb19-f4ca-4144-a89a-f0bbbe3b1e14" name="getXML"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GenXMLServiceSoapBinding</con:interface><con:operation>getXML</con:operation><con:request name="getXML" id="3836e2e4-7705-42ac-9b7a-22e7c910189b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/GenXMLWS/GenXMLService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:getXML>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </ric:getXML>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="GroovyScriptAssertion" id="e00c1cf2-17d3-4fd9-be75-787304e595c2" name="ValXML Assertion"><con:configuration><scriptText>import es.test.SaxValXSD
+log.info("Response:"+messageExchange.getResponseContent())
+def theresponse=messageExchange.getResponseContent()
+
+SaxValXSD myval=new SaxValXSD()
+log.info myval.validate(theresponse)
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://ricardo.es/GenXML/getXML" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

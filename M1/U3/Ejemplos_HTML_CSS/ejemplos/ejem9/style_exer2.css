@@ -1,0 +1,16 @@
+ul{list-style: none; padding: 0; margin: 0;}
+
+header .container-fluid{padding-left: 0; padding-right: 0; }
+header .navbar-default{background: transparent;}
+header .logo{background: url(imgs/fondo.jpg) no-repeat center / cover;height: 150px; text-align: center;}
+header .navbar-header{text-align: center;}
+header .navbar-toggle{float: none;}
+
+header .navbar-default .navbar-collapse{text-align: center;}
+header .navbar-nav {
+    float: none;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+button.all{width: 100%;}

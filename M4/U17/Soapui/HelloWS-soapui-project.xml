@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8b615b69-8f74-44fe-803b-732c07acabd2" activeEnvironment="Default" name="HelloWS" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="30ecce3e-ab9a-41a2-ad1f-4c13c1586ec8" wsaVersion="NONE" name="HelloImplementationServiceSoapBinding" type="wsdl" bindingName="{http://ricardo.es/}HelloImplementationServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080//HelloWorldWS/HelloImplementationService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080//HelloWorldWS/HelloImplementationService?wsdl"><con:part><con:url>http://localhost:8080//HelloWorldWS/HelloImplementationService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="HelloImplementationService" targetNamespace="http://ricardo.es/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ricardo.es/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ricardo.es/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="hello" type="tns:hello"/>
+      <xs:element name="helloResponse" type="tns:helloResponse"/>
+      <xs:complexType name="hello">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="helloResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="helloResponse">
+    <wsdl:part element="tns:helloResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hello">
+    <wsdl:part element="tns:hello" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="HelloInterface">
+    <wsdl:operation name="hello">
+      <wsdl:input message="tns:hello" name="hello"></wsdl:input>
+      <wsdl:output message="tns:helloResponse" name="helloResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloImplementationServiceSoapBinding" type="tns:HelloInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hello">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="hello">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="helloResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloImplementationService">
+    <wsdl:port binding="tns:HelloImplementationServiceSoapBinding" name="HelloImplementationPort">
+      <soap:address location="http://localhost:8080/HelloWorldWS/HelloImplementationService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://${#Project#endpoint}</con:endpoint></con:endpoints><con:operation id="c65462a1-7065-4b39-9667-b2fbae7bd46a" isOneWay="false" action="" name="hello" bindingOperationName="hello" type="Request-Response" outputName="helloResponse" inputName="hello" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="14a2c87f-78a8-4468-ac58-6f04c42c1d91" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </ric:hello>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ricardo.es/HelloInterface/hello"/></con:call></con:operation></con:interface><con:testSuite id="e35474bb-6961-4d3e-a2e2-9f67dd3256ad" name="AutoTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="38cd9690-105d-4786-a87e-4bc81cbee3f6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="hello TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2b581781-b252-40ad-8581-9bf0d6b4b3d6" name="hello"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloImplementationServiceSoapBinding</con:interface><con:operation>hello</con:operation><con:request name="hello" id="90c45435-6831-4eb8-9b6e-14733c5b8f2f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello>\r
+         <!--Optional:-->\r
+         <arg0>ricardo</arg0>\r
+      </ric:hello>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="230840ce-f601-477b-ae74-4e24e9202794" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="eeec43f2-37be-496d-95d2-43eead575902" name="Valid String"><con:configuration><token>Hola: ricardo</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://ricardo.es/HelloInterface/hello" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Hello Neg" id="4f1d38dc-66a6-48f5-9a93-2a53154d4398"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloImplementationServiceSoapBinding</con:interface><con:operation>hello</con:operation><con:request name="Hello Neg" id="3d0f3fe4-bcfb-4584-bf0d-376ee90f95ad"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello>\r
+      	<arg0>ricardo</arg0>
+	</ric:hello>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="43d4bfa0-8c22-4480-ba0e-5be915a59570"/><con:assertion type="GroovyScriptAssertion" id="981c09cc-88cd-4c33-9f36-27b2e5e84d4f" name="TimeScript"><con:configuration><scriptText>assert messageExchange.timeTaken &lt; 400</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="64eac612-c2df-4ae8-85aa-28dff506c7ce"><con:configuration/></con:assertion><con:assertion type="GroovyScriptAssertion" id="27be14fc-320f-4f08-bc20-62268c2dee44" name="NegativeScript"><con:configuration><scriptText>assert messageExchange.getResponseContent().contains("xx")==false</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="PropInRequest" id="e8821c6b-d444-4d7f-a593-410db87cfe66"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloImplementationServiceSoapBinding</con:interface><con:operation>hello</con:operation><con:request name="PropInRequest" id="e18bd5dd-a75c-44fa-add1-5e58892c5787"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello>
+      	<arg0>${#TestCase#NameToTest}</arg0>
+      </ric:hello>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="035337f2-81ac-42f2-b7d6-e55700afb7d5"/><con:assertion type="GroovyScriptAssertion" id="696fb828-5961-4c6e-9d43-f25b3091d8d8" name="Script Assertion"><con:configuration><scriptText>def NameToTest = context.expand('${#NameToTest}')
+//assert messageExchange.getResponseContent().contains(NameToTest )==true
+
+log.info("Response:"+messageExchange.getResponseContent())
+def theresponse=messageExchange.getResponseContent()
+
+def subs=theresponse.substring(theresponse.indexOf("&lt;return>")+"&lt;return>".length(),theresponse.indexOf("&lt;/return>"))
+def matcher=subs.matches(".*[0-9]*\\.[0-9]*.*")
+
+assert !matcher</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Hello3" id="5d7ae0a3-4727-41e6-b55d-bd28c7154fe8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloImplementationServiceSoapBinding</con:interface><con:operation>hello</con:operation><con:request name="Hello3" id="671542e0-6af1-4548-8370-8b0bb42a2604"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1819a9ec-be18-436c-9f67-69ae988e9bcf"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="7facd8c5-16be-46b9-be07-b7f88c6bc3fd" name="Carga"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties><con:property><con:name>NameToTest</con:name><con:value>rica</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="0da4d5a9-6e92-4a05-94e1-a7504ac3fd99" name="LoadTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="eaab8e56-de75-4677-8fdf-f4c1e8735d99" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Load" searchProperties="true"><con:settings/><con:testStep type="request" name="SOAP Request" id="b2fe70ec-489e-49f6-ad9d-ef1d01ca64bd"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>HelloImplementationServiceSoapBinding</con:interface><con:operation>hello</con:operation><con:request name="SOAP Request" id="e800789b-8d4d-48f5-84ac-4f1aeaa7c0af"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://${#Project#endpoint}</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ric="http://ricardo.es/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ric:hello>
+      	<arg0>ric</arg0>
+      </ric:hello>>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b5feccac-fdb9-4237-ae25-bd163aa4279f"/><con:assertion type="GroovyScriptAssertion" id="9324b2cc-5980-41d5-962d-4ce2825e1e11" name="Script Assertion"><con:configuration><scriptText>assert messageExchange.timeTaken &lt; 400</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="LeerFichero" id="d734ba9a-a2ce-4a5e-8521-1ef9acc239cd"><con:settings/><con:config><script>//Leemos el fichero
+List lineas= new File("C:\\datos.dat" ).readLines()
+//Recorremos la lista
+for(i in lineas){
+//Imprimo la linea leida , este log se ve en la seccion de Log
+//Output
+log.info(i)
+//Ejecuto un token/split para separar las lineas leidas
+array = i.split(",")
+//Asigno los valores a las properties para ello hago referencia
+//al TestCase (ya que estan a nivel local)
+testRunner.testCase.setPropertyValue('nombreEstudiante', array[0])
+testRunner.testCase.setPropertyValue('apellidoEstudiante', array[1])
+testRunner.testCase.setPropertyValue('edadEstudiante', array[2])
+//Para comprobar la lectura imprimiremos en el log los valores
+//asignados a los .properties
+log.info("Estudiante");
+log.info(testRunner.testCase.getPropertyValue('nombreEstudiante'))
+log.info(testRunner.testCase.getPropertyValue('apellidoEstudiante'))
+log.info(testRunner.testCase.getPropertyValue('edadEstudiante'))
+}</script></con:config></con:testStep><con:loadTest id="05deb7f4-63b8-4dd2-af6e-7106cacaf6cf" name="Load1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:assertion type="Step Maximum" name="Step Maximum"><con:configuration><name>Step Maximum</name><min-requests>100</min-requests><max-value>1000</max-value><test-step>SOAP Request</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>endpoint</con:name><con:value>localhost:8080/HelloWorldWS/HelloImplementationService</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.netmind.util.NoExiste&apos; to &apos;NoExisteException&apos;&#x0D;&#x0A;- Original project: &apos;JWTExampleElabWTest&apos;&#x0D;&#x0A;- Original element: &apos;com.netmind.util.NoExiste&apos;&#x0D;&#x0A;- Renamed element: &apos;com.netmind.util.NoExisteException&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NoExiste&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.netmind.util{NoExiste.java[NoExiste" matchStrategy="1" name="NoExisteException" qualified="false" references="true" similarDeclarations="false" stamp="1502198283351" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- Specify a JDBC datasource -->
+    <Resource name="jdbc/sqltrainer" auth="Container"
+        type="javax.sql.DataSource" username="admin7TCylCw" password="n3NrUEq4-AJC"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://127.12.24.130:3306/connector"
+        maxActive="10" maxIdle="4" />
+</Context>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;es.ricardo.logic&apos; to &apos;HelloWorldRestful/src&apos;&#x0D;&#x0A;- Original project: &apos;HelloWorldREST&apos;&#x0D;&#x0A;- Destination element: &apos;HelloWorldRestful/src&apos;&#x0D;&#x0A;- Original element: &apos;HelloWorldREST/src/es.ricardo.logic&apos;" description="Copy package" destination="=HelloWorldRestful/src" element1="/src&lt;es.ricardo.logic" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1499273561341" version="1.0"/>
+</session>

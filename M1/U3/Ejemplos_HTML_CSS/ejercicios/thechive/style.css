@@ -1,0 +1,71 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	color:white;
+	font-size: 15px;
+	width: 624px;
+	margin: 0 auto;
+}
+
+a{text-decoration: none;color:white;}
+a:hover{color:#8E9415;}
+
+ul{list-style: none;padding: 0; margin: 0;}
+
+h1,h2{padding: 0; margin:0;}
+
+/* Cabecera */
+header{background-color: #000;margin:0;padding: 10px 0;position: fixed; width: 624px; z-index: 1000;box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);display: table;}
+header > div{display: table-cell;}
+	header .left{width:40px;padding: 0 20px;}
+		header .left #menu{background: url(imgs/icons/menu.png) no-repeat;padding: 16px;}
+		header .left #menu:hover{background: url(imgs/icons/menu_a.png) no-repeat;}
+		header .left nav{display: none;position: absolute;padding: 10px 5px;background: #000;margin:12px 0 0 -40px;}
+		header .left:hover nav{display: inline-block;}
+			header .left nav ul li{border-bottom: 2px dashed rgb(50,50,50); padding: 5px 20px; }
+
+	header .center{
+		font-family: 'Space Mono', monospace;
+		font-size: 2em;
+		text-align: center;
+		width: 100%;
+	}
+	header .center div{text-transform: uppercase;font-weight: 800;display: inline-block;}
+	header .center div span{color:yellow;}
+	
+	header .right{
+	    width: 40px;
+	    padding: 0 20px;
+	}
+		header .right .reload{background: url(imgs/icons/refresh.png) no-repeat;padding: 8px 16px;}
+		header .right .reload:hover{background: url(imgs/icons/refresh_a.png) no-repeat;}
+
+
+/* Central */
+section{background-color: rgb(50,50,50);}
+section article{border:3px dashed #000;padding: 5px;background: url(imgs/icons/arrow.png) no-repeat right center;}
+section article:hover{background: url(imgs/icons/arrow_a.png) no-repeat right center;}
+
+	section article div{display: inline-block; vertical-align: top;}
+	section article div.video{width: 220px;}
+		section article div.video video{width: 100%;}
+
+	section article div.body{padding: 10px 10px;width: 330px;}
+		section article div.body>div{display: block;vertical-align: center;}
+		section article div.body>div.main{padding: 10px 0;}
+		section article div.body ul li{margin: 5px 0;padding:5px 0 10px 37px; }
+		
+		section article div.body .info li:first-child{background: url(imgs/icons/monitor.png) no-repeat;}
+		section article div.body .info li:nth-child(2){background: url(imgs/icons/bubble.png) no-repeat;}
+		
+		section article div.body .main > div:nth-child(2){float: right;}
+
+		section article div.body ul.thumbs li:first-child{background: url(imgs/icons/thumb-up.png) no-repeat right;padding:5px 35px 5px 0px; }
+		section article div.body ul.thumbs li:nth-child(2){background: url(imgs/icons/thumb-down.png) no-repeat right;padding:5px 35px 5px 0px;}
+
+
+
+
+
+

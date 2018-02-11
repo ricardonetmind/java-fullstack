@@ -1,0 +1,14 @@
+<header>
+	<div>Logo</div>
+	<nav>
+		<ul>
+			<li>
+				<a href="menu1.html">menu 1</a>
+				<a href="menu2.html">menu 2</a>
+				<a href="menu3.html">menu 3</a>
+				<a href="logout">Salir</a>
+			</li>
+		</ul>
+	</nav>
+	s
+</header>

@@ -1,0 +1,23 @@
+package com.netmind.persistence;
+
+import org.hibernate.SessionFactory;
+
+public class ManageEmployee {
+	
+	static SessionFactory factory=null;
+	
+	public static ManageEmployee instance=null;
+	
+	public ManageEmployee(){
+		
+	}
+	
+	public static ManageEmployee getInstance(){
+		if(instance==null){
+			instance=new ManageEmployee();
+		}
+		
+		return instance;
+	}
+	
+}

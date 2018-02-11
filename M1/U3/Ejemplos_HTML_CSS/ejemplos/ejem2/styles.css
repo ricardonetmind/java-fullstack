@@ -1,0 +1,55 @@
+body{
+	font-size: 15px;
+	background-color: #76FA11;
+}
+/* un comentario */
+
+header{
+	padding: 200px;
+	background:url(imgs/principal.jpg) no-repeat 50% 50% / contain #fff;
+}
+
+h1{font-size: 3em;text-transform: uppercase;}
+
+
+p{
+	font-size: 1.5em;font-family: Verdanax, Arial;
+	background-color: #9511fa;
+	color:white;
+	border:10px dotted red;
+	padding: 20px;
+	margin: 50px;
+
+}
+
+p.dasheado{border:10px dotted red;}
+p.solido{border:10px solid red;}
+
+.derecho{float: right;}
+.oculto{display: none;}
+
+.absoluto{display: inline-block; width: 200px;position: absolute;top: 60px;}
+
+#f1{z-index: 300;}
+#f2{border-color: yellow;z-index: 200;}
+
+p#p1{border:10px solid black;}
+
+p span{
+	font-style: italic;
+	background-color: #fa2011;
+	display: inline-block;
+	width: 50%;
+}
+
+div.posicionado{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 300px;
+	border: 2px solid yellow;
+	background-color: blue;
+	color: white;
+	padding: 10px;
+}

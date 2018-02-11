@@ -1,0 +1,6 @@
+package com.netmind.models;
+
+public class Snippet {
+	<mapping resource="employee.hbm.xml" />
+}
+

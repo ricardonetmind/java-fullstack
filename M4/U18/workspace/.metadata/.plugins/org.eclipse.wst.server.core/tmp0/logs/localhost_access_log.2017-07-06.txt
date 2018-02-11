@@ -1,0 +1,4 @@
+127.0.0.1 - - [06/Jul/2017:09:11:45 +0200] "GET / HTTP/1.1" 404 993
+0:0:0:0:0:0:0:1 - - [06/Jul/2017:09:11:47 +0200] "GET /HelloWorldRestful/ HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [06/Jul/2017:09:11:58 +0200] "GET /HelloWorldRestful/usuarios/23 HTTP/1.1" 500 62
+0:0:0:0:0:0:0:1 - - [06/Jul/2017:09:12:48 +0200] "GET /HelloWorldRestful/usuarios/23 HTTP/1.1" 500 62

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Context>
+<Context>
+	<!-- Specify a JDBC datasource -->
+	<Resource name="jdbc/jwt" auth="Container" type="javax.sql.DataSource"
+		username="root" password="XKNaga79492" driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://node17354-env-9172194.jelastic.cloudhosted.es/jwt" maxActive="10" maxIdle="4" />
+</Context>

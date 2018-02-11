@@ -1,0 +1,45 @@
+body{
+	padding: 0;
+	margin:0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color:white;
+}
+
+body section{
+	width: 400px;
+	margin:0 auto;
+	background-color: #2B2D2E;
+	padding: 20px 15px;
+	margin-top: 80px;
+	border-radius: 10px;
+}
+
+a{color:#82D613;}
+a:hover{color:#13D6C9;}
+
+h1{font-weight: normal;font-size: 2em;padding: 0; margin: 10px;}
+
+body section h1{text-align: center;}
+
+body section form{margin:40px 0 10px 0;}
+
+body section form div{padding: 10px;}
+
+body section form div.form-input input{width: 90%;padding: 10px;border-radius: 20px;font-size: 0.9em;padding-left: 35px;}
+
+body section form div.form-input input#nombre{background: url(imgs/user.png) no-repeat 10px center #fff;}
+body section form div.form-input input#tel{background: url(imgs/telephone.png) no-repeat 10px center #fff;}
+body section form div.form-input input#email{background: url(imgs/envelope.png) no-repeat 10px center #fff;}
+
+body section form div.form-input input#pass{
+	background: url(imgs/lock.png) no-repeat 10px center #fff/auto;
+}
+
+body section form div.form-input-accept{font-size: 0.8em;}
+body section form div.form-input-accept input{width: auto;}
+
+body section form div.boton-inf{text-align: right;}
+body section form div.boton-inf button{background-color: #82D613;color:white;border: 0;padding: 10px 20px;border-radius: 15px;font-size: 1.1em;}
+body section form div.boton-inf button:hover{background-color:#13D6C9;color:#0e0e0e;}
+

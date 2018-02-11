@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;theResponse&apos; in &apos;com.netmind.rest.UserResource.getUsuarioList(...)&apos; to &apos;mResponse&apos;&#x0D;&#x0A;- Original project: &apos;JWTExampleElab&apos;&#x0D;&#x0A;- Original element: &apos;com.netmind.rest.UserResource.getUsuarioList(String).theResponse&apos;&#x0D;&#x0A;- Renamed element: &apos;theResponse&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;theResponse&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;com.netmind.rest{UserResource.java[UserResource~getUsuarioList~QString;@theResponse!1244!1269!1253!1263!QResponse;!0!false" name="mResponse" references="true" stamp="1499858397386" version="1.0"/>
+</session>

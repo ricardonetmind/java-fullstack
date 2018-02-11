@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Un formulario</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<h1>Un formulario</h1>
+
+	<form action="respuesta.html" method="post">
+		
+		<div>
+			<label for="nombreid">Tu nombre</label>
+			<input type="text" name="nombre" placeholder="Tu nombre" id="nombreid" value="Ricardo">
+		</div>
+
+		<input type="text" name="apellido" placeholder="Tu apellido"><br>
+
+		<input type="date" name="nacimiento" placeholder="Tu fecha de nacimiento"><br>
+		<input type="number" name="edad" placeholder="Tu edad"><br>
+
+		<input type="email" name="email" placeholder="Tu email"><br>
+		<input type="password" name="pass" placeholder="Tu contraseña"><br>
+
+		<textarea name="descripcion" placeholder="Tu descripción" >Este es un valor por defecto</textarea><br>
+		
+		<select name="pais" id="">
+			<option value="es">ES</option>
+			<option value="en">EN</option>
+			<option value="de" selected="true">DE</option>
+		</select>
+
+		<p>
+			Idiomas:<br>
+			<input type="checkbox" name="idioma" value="es"> ES<br>
+			<input type="checkbox" name="idioma" value="en" checked="true"> EN<br>
+			<input type="checkbox" name="idioma" value="de" id="de_id"> <label for="de_id">DE</label><br>
+		</p>
+
+		<p>
+			Equipo:<br>
+			<input type="radio" name="equipo" value="md"> Madrid<br>
+			<input type="radio" name="equipo" value="br" checked="true"> Barça<br>
+			<input type="radio" name="equipo" value="rl"> Real<br>
+		</p>
+
+
+		<button>Guardar</button>
+
+	</form>
+
+</body>
+</html>

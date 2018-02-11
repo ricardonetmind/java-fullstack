@@ -1,0 +1,5 @@
+com\netmind\controllers\ListaMaquillajesServlet.class
+com\netmind\controllers\LoginServlet.class
+com\netmind\models\Maquillaje.class
+com\netmind\controllers\LogoutServlet.class
+com\netmind\models\Usuario.class

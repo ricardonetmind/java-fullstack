@@ -1,0 +1,4 @@
+com\netmind\rest\SpringRestController.class
+com\netmind\config\SpringConfig.class
+com\netmind\config\WebAppInitializer.class
+com\netmind\model\Message.class

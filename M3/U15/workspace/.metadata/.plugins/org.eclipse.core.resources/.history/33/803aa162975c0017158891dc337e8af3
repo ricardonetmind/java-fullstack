@@ -1,0 +1,5 @@
+package com.netmind.persistence;
+
+public class ManageEmployee {
+
+}

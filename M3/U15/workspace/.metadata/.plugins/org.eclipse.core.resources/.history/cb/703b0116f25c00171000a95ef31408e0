@@ -1,0 +1,9 @@
+package com.netmind.models;
+
+public class Department {
+	public int did;
+	public String nombre;
+	public String localizacion;
+	
+	
+}

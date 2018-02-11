@@ -1,0 +1,11 @@
+package com.netmind.models;
+
+public class Role {
+	private int rid;
+	private String name;
+	private String description;
+	
+	public Role(){}
+	
+	
+}

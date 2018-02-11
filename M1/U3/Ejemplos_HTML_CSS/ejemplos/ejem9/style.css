@@ -1,0 +1,6 @@
+.row *{border: 5px solid white; padding: 20px;}
+
+.row .bg-azul{background-color: blue;}
+.row .bg-gris{background-color: #eee;}
+.row .bg-gris2{background-color: #ddd;padding: 100px;}
+.row .bg-rojo{background-color: red;}

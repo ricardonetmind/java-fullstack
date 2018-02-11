@@ -1,0 +1,44 @@
+article{margin: 20px 0;}
+
+/* Con table */
+
+table{
+	background-color: #ccc;
+	border-collapse: collapse;
+	color:blue;
+}
+
+table *{border: 2px dashed yellow;}
+
+th{
+	background-color: gray;color:white;text-transform: uppercase;
+}
+td,th{border: 1px solid blue; padding: 10px 150px;}
+
+
+/* Con divs */
+div.tabla{
+	background-color: #ccc;
+	color:blue;
+	display: table;
+	border-collapse: collapse;
+}
+
+
+div.cabecera-tabla, div.fila-tabla,div.pie-tabla{
+	display: table-row;
+}
+
+div.cabecera-tabla div{
+	background-color: gray;
+	color:white;
+	text-transform: uppercase;
+}
+
+div.cabecera-tabla div, div.fila-tabla div, div.pie-tabla div{
+	border: 1px solid blue;
+	padding: 10px 150px;
+	display: table-cell;
+}
+
+div#myid.fila-tabla.dasheado{border:1px dashed yellow;}

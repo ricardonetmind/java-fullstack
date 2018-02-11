@@ -1,0 +1,5 @@
+#errores{color:red;}
+
+form > div {padding: 0 0 20px 0;}
+.mensajes_error div{display: none;color:red;}
+.mensajes_error div.show{display: block;}

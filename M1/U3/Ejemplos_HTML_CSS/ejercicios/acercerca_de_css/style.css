@@ -1,0 +1,17 @@
+body{
+	background-color: #83b061;font-family: verdana;font-size: 15px;margin: 0;padding: 0; color:white;line-height: 1.5em;
+}
+
+h1{color: #8E61B0;padding: 0; margin: 0;font-weight: normal;}
+h2{color: #8E61B0;padding: 0; margin: 0;font-weight: normal;}
+
+a{color: #78F21B; text-decoration: none;}
+
+header{margin: 0 20px;}
+header h1{font-size: 3em; margin: 2em 0;}
+header p{border-bottom: 2px solid white;margin-bottom: 20px;padding-bottom: 10px;}
+header p span {color: #951BF2;}
+
+section{margin: 0 20px;}
+
+footer{margin: 0 20px;}

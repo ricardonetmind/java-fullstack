@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<title>Diseño bootstrap</title>
+	
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style_exer2.css">
+</head>
+
+
+<body>
+	
+	<div class="container">
+		<header class="row">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="logo"><img src="imgs/logo.png" width="100px"></div>
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">Bienvenido <span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">Nuestra compañía</a></li>
+			        <li><a href="#">Acerca</a></li>
+			      </ul>
+			      
+			      
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</header>
+
+		<section class="row">
+			<div class="col-xs-12">
+					<ul>
+						<li><h2>Contactanos</h2></li>
+						<li><h3>Editar</h3></li>
+					</ul>
+			</div>
+			<article class="col-xs-12">
+				<form>
+				  <h2>Tus detalles</h2>
+				  <p>Déjanos saber cómo contestarte</p>
+
+				  <div class="form-group">
+				    <label for="nombreId">Nombre*</label>
+				    <input type="text" name="nombre" class="form-control" id="nombreId" placeholder="Nombre">
+				  </div>
+				  <div class="form-group">
+				    <label for="apellId">Apellidos*</label>
+				    <input type="text" name="apell" class="form-control" id="apellId" placeholder="Apellido">
+				  </div>
+				  <div class="form-group">
+				    <label for="apellId">Email*</label>
+				    <input type="email" name="email" class="form-control" id="emailId" placeholder="Email">
+				  </div>
+				  
+				  <h2>Cómo podemos ayudarte?</h2>
+				  <p>Déjanos saber cómo ayudarte</p>
+
+				  <div class="form-group">
+				    <label for="detId">Nombre</label>
+				    <textarea name="detail" class="form-control" id="detId" placeholder="Detalles de tu consulta"></textarea>
+				  </div>
+				  
+				  <button type="button" class="btn btn-warning all">Enviar</button>
+				</form>	
+			</article>
+		</section>
+	</div>
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</html>
